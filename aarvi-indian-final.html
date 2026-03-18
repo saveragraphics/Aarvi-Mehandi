@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aarvi Mehandi Arts – Bridal Mehendi Artist Bhopal</title>
+<meta name="description" content="Aarvi Mehandi Arts – Bhopal's most loved bridal mehendi artist. Custom Indian designs, home service, 4.9★ rated."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blush:#F9EDE8;--rose:#F2C4B5;--coral:#E8705A;--coral-dk:#C95642;
+  --peach:#F5DDD4;--mint:#D4EDE8;--lemon:#F5EEC8;--lilac:#E8DFF5;
+  --text:#2C1810;--muted:#6B4C42;--lt:#A08070;--white:#fff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--blush);color:var(--text);overflow-x:hidden;line-height:1.6}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--blush)}::-webkit-scrollbar-thumb{background:var(--coral);border-radius:10px}
+
+/* REAL IMAGE SLOTS — warm gradient shows until photo loads */
+.slot{width:100%;height:100%;overflow:hidden;position:relative;background:linear-gradient(135deg,#F0C8B0 0%,#E8A898 50%,#D49080 100%)}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0;transition:opacity .6s ease;display:block}
+.slot img.on{opacity:1}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(249,237,232,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,112,90,.12)}
+.logo{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:900;color:var(--text)}.logo span{color:var(--coral)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .3s}
+.nav-links a:hover{color:var(--coral)}
+.nav-ph{font-size:.8rem;font-weight:600;color:var(--coral)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.burger span{width:22px;height:2px;background:var(--text);display:block;border-radius:2px}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 3rem 3rem;position:relative;overflow:hidden;gap:2rem;background:var(--blush)}
+#hero::before{content:'';position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,var(--peach) 0%,var(--rose) 55%,transparent 80%);border-radius:50% 0 0 50%;z-index:0}
+.hleft{position:relative;z-index:2}
+.htag{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1.5px solid var(--rose);color:var(--coral);padding:.35rem 1rem;border-radius:100px;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.5rem;animation:popIn .6s .2s both}
+h1{font-family:'Fraunces',serif;font-size:clamp(2.8rem,5.5vw,4.4rem);font-weight:900;line-height:1.05;color:var(--text);letter-spacing:-.03em;animation:slideUp .7s .3s both}
+h1 em{font-style:italic;font-weight:400;color:var(--coral)}
+.hsub{font-size:.92rem;color:var(--muted);max-width:400px;margin:1.2rem 0 2rem;line-height:1.8;font-weight:300;animation:slideUp .7s .5s both}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;animation:slideUp .7s .7s both}
+.btn{background:var(--coral);color:#fff;padding:.85rem 2rem;border-radius:100px;font-size:.82rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all .3s;box-shadow:0 8px 24px rgba(232,112,90,.35);display:inline-flex;align-items:center}
+.btn:hover{background:var(--coral-dk);transform:translateY(-2px)}
+.btn2{background:transparent;color:var(--coral);padding:.85rem 2rem;border-radius:100px;font-size:.82rem;font-weight:600;border:2px solid var(--coral);text-decoration:none;cursor:pointer;transition:all .3s}
+.btn2:hover{background:var(--coral);color:#fff;transform:translateY(-2px)}
+
+/* floating cones */
+.dc{position:absolute;z-index:3;pointer-events:none}
+.d1{bottom:20%;left:39%;animation:f1 4s ease-in-out infinite}
+.d2{top:28%;left:33%;animation:f2 3.5s 1s ease-in-out infinite}
+.d3{bottom:32%;left:27%;animation:f1 5s .5s ease-in-out infinite}
+@keyframes f1{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+@keyframes f2{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+
+.hright{position:relative;z-index:2;display:flex;justify-content:center}
+.himg-wrap{position:relative;width:100%;max-width:480px;animation:slideUp .8s .4s both}
+.hportrait{width:100%;aspect-ratio:4/5;border-radius:60% 40% 55% 45%/50% 50% 50% 50%;overflow:hidden;box-shadow:0 30px 80px rgba(200,80,60,.2)}
+.hbf{position:absolute;background:#fff;border-radius:16px;padding:.8rem 1.2rem;box-shadow:0 8px 30px rgba(0,0,0,.1);display:flex;align-items:center;gap:.6rem;z-index:4}
+.hbf1{top:8%;right:-8%;animation:f1 3.5s ease-in-out infinite}
+.hbf2{bottom:12%;left:-10%;animation:f2 4s ease-in-out infinite}
+.hbf3{top:45%;right:-12%;animation:f1 4.5s .8s ease-in-out infinite}
+.bi strong{display:block;font-size:.88rem;font-weight:700;color:var(--text)}
+.bi span{font-size:.68rem;color:var(--lt)}
+.stars{display:flex;gap:2px;margin-bottom:2px}
+.stars i{color:#F5A623;font-size:.75rem;font-style:normal}
+
+/* STATS */
+.stats{background:#fff;margin:0 3rem;border-radius:20px;padding:2rem 3rem;display:flex;justify-content:space-around;align-items:center;box-shadow:0 10px 40px rgba(200,80,60,.08);position:relative;z-index:5;transform:translateY(-30px)}
+.sn{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:900;color:var(--text);line-height:1}
+.sn sup{font-size:1rem;color:var(--coral)}
+.sl{font-size:.72rem;color:var(--lt);margin-top:.2rem}
+.sdiv{width:1px;height:40px;background:var(--rose);opacity:.6}
+
+/* HELPERS */
+.eye{display:flex;align-items:center;gap:.8rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:.6rem}
+.eye::before{content:'';flex:0 0 30px;height:1.5px;background:var(--coral)}
+.stitle{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--text);letter-spacing:-.02em;line-height:1.15;margin-bottom:.5rem}
+.stitle em{font-style:italic;font-weight:400;color:var(--coral)}
+
+/* SERVICES */
+#services{padding:4rem 3rem 5rem}
+.svc-top{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sc{border-radius:20px;padding:1.8rem 1.5rem;position:relative;overflow:hidden;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
+.sc:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.c-m{background:var(--mint)}.c-l{background:var(--lemon)}.c-li{background:var(--lilac)}.c-p{background:var(--peach)}
+.si{width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.sc h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.4rem}
+.sc p{font-size:.76rem;color:var(--muted);line-height:1.7;font-weight:300}
+.slink{display:inline-flex;align-items:center;gap:.3rem;margin-top:1rem;font-size:.75rem;font-weight:600;color:var(--coral);text-decoration:none;transition:gap .3s}
+.sc:hover .slink{gap:.6rem}
+.scn{position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.3)}
+
+/* ABOUT */
+#about{padding:4rem 3rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.ab-imgs{position:relative;height:540px}
+.ab-main{position:absolute;right:0;top:0;width:72%;height:80%;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(200,80,60,.15)}
+.ab-sub{position:absolute;left:0;bottom:0;width:52%;height:55%;border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.12);border:4px solid var(--blush)}
+.ab-badge{position:absolute;top:40%;right:-5%;background:var(--coral);color:#fff;border-radius:16px;padding:1rem 1.2rem;text-align:center;box-shadow:0 8px 24px rgba(232,112,90,.4);z-index:2}
+.ab-badge strong{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:900;display:block;line-height:1}
+.ab-badge small{font-size:.65rem;opacity:.85}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2rem}
+.wi{display:flex;align-items:flex-start;gap:.7rem;background:#fff;border-radius:14px;padding:.9rem 1rem;box-shadow:0 4px 16px rgba(0,0,0,.05);transition:transform .3s}
+.wi:hover{transform:translateY(-3px)}
+.wi-ic{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.wi h4{font-size:.82rem;font-weight:600;color:var(--text)}
+.wi p{font-size:.72rem;color:var(--lt);font-weight:300;line-height:1.5}
+
+/* GALLERY */
+#gallery{padding:4rem 3rem 5rem;background:#fff;border-radius:40px;margin:0 1.5rem}
+.gal-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;gap:2rem;flex-wrap:wrap}
+.gtabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.gtab{padding:.45rem 1.2rem;border-radius:100px;border:1.5px solid var(--rose);background:transparent;color:var(--muted);font-size:.75rem;font-weight:500;cursor:pointer;transition:all .3s;font-family:'Plus Jakarta Sans',sans-serif}
+.gtab.on,.gtab:hover{background:var(--coral);color:#fff;border-color:var(--coral)}
+.gg{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:220px 160px 240px;gap:1rem}
+.gci{border-radius:18px;overflow:hidden;position:relative;cursor:pointer}
+.gci .slot img{transition:transform .55s ease,opacity .6s ease}
+.gci:hover .slot img{transform:scale(1.07)}
+.gci::after{content:attr(data-lb);position:absolute;inset:0;border-radius:18px;z-index:3;background:linear-gradient(to top,rgba(44,24,16,.65) 0%,transparent 55%);display:flex;align-items:flex-end;padding:1rem;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .3s}
+.gci:hover::after{opacity:1}
+.gc1{grid-column:1;grid-row:1/2}.gc2{grid-column:2;grid-row:1/3}.gc3{grid-column:3;grid-row:1/2}.gc4{grid-column:1;grid-row:2/4}.gc5{grid-column:3;grid-row:2/3}.gc6{grid-column:2;grid-row:3}.gc7{grid-column:3;grid-row:3}
+.gal-cta{text-align:center;margin-top:2rem}
+.btn3{display:inline-flex;align-items:center;gap:.5rem;background:var(--blush);color:var(--coral);padding:.8rem 2rem;border-radius:100px;font-size:.82rem;font-weight:600;text-decoration:none;border:1.5px solid var(--rose);transition:all .3s}
+.btn3:hover{background:var(--coral);color:#fff}
+
+/* PRICING */
+#pricing{padding:5rem 3rem}
+.pt{text-align:center;margin-bottom:3rem}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto}
+.pc{background:#fff;border-radius:24px;padding:2.5rem 2rem;box-shadow:0 8px 30px rgba(0,0,0,.06);position:relative;transition:transform .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(232,112,90,.15)}
+.pc.feat{background:var(--coral)}
+.pc.feat .ptier,.pc.feat .pname,.pc.feat .pprice,.pc.feat .pdesc,.pc.feat .pli{color:#fff!important}
+.pc.feat .pli{border-bottom-color:rgba(255,255,255,.2)!important}
+.pc.feat .pli::before{color:rgba(255,255,255,.8)!important}
+.pc.feat .pb{background:#fff!important;color:var(--coral)!important}
+.pbadge{position:absolute;top:1.2rem;right:1.2rem;background:var(--lemon);color:var(--text);font-size:.62rem;font-weight:700;padding:.3rem .7rem;border-radius:100px;letter-spacing:.06em;text-transform:uppercase}
+.ptier{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--lt);margin-bottom:.5rem}
+.pname{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:1rem}
+.pprice{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:900;color:var(--coral);line-height:1}
+.pprice sub{font-size:1.2rem;vertical-align:middle}.pprice sup{font-size:.9rem}
+.pdesc{font-size:.78rem;color:var(--lt);margin:.5rem 0 1.5rem;font-weight:300}
+.plist{list-style:none;margin-bottom:2rem}
+.pli{padding:.5rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:.6rem}
+.pli::before{content:'✓';color:var(--coral);font-weight:700}
+.pb{display:block;width:100%;text-align:center;padding:.9rem;border-radius:100px;font-size:.8rem;font-weight:600;background:var(--blush);color:var(--coral);text-decoration:none;border:none;cursor:pointer;transition:all .3s;font-family:'Plus Jakarta Sans',sans-serif}
+.pb:hover{background:var(--coral);color:#fff}
+
+/* INSTAGRAM */
+#ig{padding:4rem 3rem 5rem}
+.ig-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2rem;gap:2rem;flex-wrap:wrap}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.ig-item{aspect-ratio:1;border-radius:16px;overflow:hidden;position:relative;cursor:pointer}
+.ig-item .slot img{transition:transform .5s ease,opacity .6s ease}
+.ig-item:hover .slot img{transform:scale(1.08)}
+.ig-item::after{content:'♡  View';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.1em;opacity:0;transition:opacity .3s;background:rgba(44,24,16,.45);z-index:3}
+.ig-item:hover::after{opacity:1}
+.ig-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--coral);color:#fff;padding:.8rem 2rem;border-radius:100px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 6px 20px rgba(232,112,90,.3);white-space:nowrap}
+.ig-btn:hover{background:var(--coral-dk);transform:translateY(-2px)}
+
+/* TESTIMONIALS */
+#testimonials{padding:4rem 3rem 5rem;background:#fff;border-radius:40px;margin:0 1.5rem 2rem}
+.tw{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
+.tp{position:relative}
+.tpb{width:100%;aspect-ratio:3/4;border-radius:24px;overflow:hidden}
+.tqb{position:absolute;bottom:-1rem;right:-1rem;background:var(--coral);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-family:'Fraunces',serif}
+.tsl{position:relative;min-height:220px;margin-top:1.5rem}
+.tc{position:absolute;top:0;left:0;right:0;background:var(--blush);border-radius:20px;padding:2rem;opacity:0;transform:translateY(16px);transition:all .5s ease;pointer-events:none}
+.tc.on{opacity:1;transform:translateY(0);pointer-events:all}
+.tst{display:flex;gap:3px;margin-bottom:1rem}
+.tst i{color:#F5A623;font-size:1rem;font-style:normal}
+.tq{font-family:'Fraunces',serif;font-size:1.05rem;font-style:italic;font-weight:300;color:var(--text);line-height:1.7;margin-bottom:1.2rem}
+.ta{font-size:.78rem;font-weight:600;color:var(--muted)}
+.tl{font-size:.7rem;color:var(--lt);font-weight:300}
+.tdots{display:flex;gap:.5rem;margin-top:14rem}
+.tdot{width:28px;height:4px;border-radius:2px;background:var(--rose);border:none;cursor:pointer;transition:all .3s}
+.tdot.on{background:var(--coral);width:48px}
+
+/* BOOKING */
+#booking{padding:4rem 3rem 5rem}
+.bw{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start}
+.bsub{font-size:.88rem;color:var(--muted);line-height:1.9;font-weight:300;margin-top:.8rem}
+.chips{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem}
+.chip{display:flex;align-items:center;gap:1rem;background:#fff;border-radius:16px;padding:1rem 1.2rem;box-shadow:0 4px 16px rgba(0,0,0,.06);text-decoration:none;transition:transform .3s,box-shadow .3s}
+.chip:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,112,90,.12)}
+.cico{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.ci-r{background:rgba(232,112,90,.1)}.ci-g{background:rgba(37,211,102,.1)}.ci-b{background:rgba(59,130,246,.1)}
+.clbl{font-size:.68rem;color:var(--lt);font-weight:400;margin-bottom:2px}
+.cval{font-size:.88rem;font-weight:600;color:var(--text)}
+.bfc{background:#fff;border-radius:24px;padding:2.5rem;box-shadow:0 10px 40px rgba(0,0,0,.08)}
+.bfc h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--text);margin-bottom:1.5rem}
+.fg{margin-bottom:1.2rem}
+.fg label{display:block;font-size:.72rem;font-weight:600;color:var(--muted);letter-spacing:.05em;margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--blush);border:1.5px solid transparent;border-radius:12px;padding:.8rem 1rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;color:var(--text);outline:none;transition:border-color .3s,background .3s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--coral);background:#fff}
+.fg textarea{height:85px;resize:none}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fsub{width:100%;padding:1rem;border-radius:100px;background:var(--coral);color:#fff;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;font-weight:600;transition:all .3s;box-shadow:0 8px 24px rgba(232,112,90,.35);margin-top:.5rem}
+.fsub:hover{background:var(--coral-dk);transform:translateY(-2px)}
+.fok{display:none;text-align:center;padding:2rem 0}
+.fok .fic{font-size:3rem;margin-bottom:.8rem}
+.fok h4{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--coral);margin-bottom:.5rem}
+.fok p{font-size:.82rem;color:var(--muted);line-height:1.8;font-weight:300}
+
+/* SUBSCRIBE */
+.sub{background:var(--coral);margin:0 1.5rem;border-radius:24px;padding:3rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.sub h2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#fff}
+.sub p{font-size:.85rem;color:rgba(255,255,255,.75);margin-top:.4rem;font-weight:300}
+.subf{display:flex;max-width:420px;flex:1}
+.subin{flex:1;padding:.9rem 1.5rem;border:none;border-radius:100px 0 0 100px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.85rem;outline:none;background:rgba(255,255,255,.95);color:var(--text)}
+.subbtn{padding:.9rem 1.8rem;background:var(--text);color:#fff;border:none;border-radius:0 100px 100px 0;font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .3s}
+
+/* FOOTER */
+footer{padding:4rem 3rem 2rem;background:var(--blush)}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.flogo{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:900;color:var(--text);margin-bottom:.5rem}.flogo span{color:var(--coral)}
+.fab p{font-size:.8rem;color:var(--lt);line-height:1.9;font-weight:300;max-width:260px}
+.fsocs{display:flex;gap:.5rem;margin-top:1.2rem}
+.fsoc{width:36px;height:36px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;text-decoration:none;color:var(--muted);box-shadow:0 2px 8px rgba(0,0,0,.07);transition:all .3s}
+.fsoc:hover{background:var(--coral);color:#fff;transform:translateY(-2px)}
+.fcol h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text);margin-bottom:1rem}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:.55rem}
+.fcol ul li a{font-size:.82rem;color:var(--lt);font-weight:300;text-decoration:none;transition:color .3s}
+.fcol ul li a:hover{color:var(--coral)}
+.fbot{border-top:1px solid rgba(232,112,90,.15);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fbot p{font-size:.75rem;color:var(--lt);font-weight:300}
+
+/* WA */
+.wa{position:fixed;bottom:2rem;right:2rem;z-index:800;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;font-size:1.5rem;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(37,211,102,.4);animation:wap 2s ease-in-out infinite;transition:transform .3s}
+.wa:hover{transform:scale(1.1)}
+@keyframes wap{0%,100%{box-shadow:0 8px 24px rgba(37,211,102,.4)}50%{box-shadow:0 8px 40px rgba(37,211,102,.6),0 0 0 10px rgba(37,211,102,.1)}}
+
+/* LIGHTBOX */
+.lb{display:none;position:fixed;inset:0;z-index:2000;background:rgba(20,8,5,.94);align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:12px}
+.lbx{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.5rem;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center}
+
+/* MOB NAV */
+.mn{position:fixed;inset:0;background:rgba(249,237,232,.98);backdrop-filter:blur(12px);z-index:850;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;transform:translateX(100%);transition:transform .4s ease}
+.mn.open{transform:translateX(0)}
+.mn a{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;color:var(--text);text-decoration:none;transition:color .3s}
+.mn a:hover{color:var(--coral)}
+.mx{position:absolute;top:1.5rem;right:2rem;background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--text)}
+
+/* SCROLL REVEAL */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.rvl{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s ease}
+.rvl.in{opacity:1;transform:none}
+.rvr{opacity:0;transform:translateX(36px);transition:opacity .7s ease,transform .7s ease}
+.rvr.in{opacity:1;transform:none}
+@keyframes slideUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  #hero{grid-template-columns:1fr;padding:8rem 2rem 2rem}
+  .btns{justify-content:center}.hsub{margin-left:auto;margin-right:auto}
+  .hright{max-width:380px;margin:0 auto}
+  .hbf1{right:-4%}.hbf2{left:-4%}.hbf3{right:-5%;top:50%}
+  .stats{margin:0 1.5rem;padding:1.5rem 2rem;flex-wrap:wrap;gap:1rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  #about{grid-template-columns:1fr;padding:4rem 2rem}
+  .ab-imgs{height:400px;max-width:500px;margin:0 auto}
+  .gg{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gc1,.gc2,.gc3,.gc4,.gc5,.gc6,.gc7{grid-column:auto;grid-row:auto;aspect-ratio:1}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .tw{grid-template-columns:1fr}.tp{max-width:300px;margin:0 auto}
+  .bw{grid-template-columns:1fr}
+  .pcards{grid-template-columns:1fr;max-width:400px}
+  .tdots{margin-top:22rem}
+  .fg2{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  nav{padding:1rem 1.5rem}.nav-links,.nav-ph{display:none}.burger{display:flex}
+  .svc-grid{grid-template-columns:1fr}
+  .sub{padding:2rem;flex-direction:column;margin:0;border-radius:0}
+  .subf{max-width:100%}
+  #gallery,#testimonials{margin:0;border-radius:0}
+  .why{grid-template-columns:1fr}
+  .gg{grid-template-columns:1fr}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .tdots{margin-top:28rem}
+  .fg2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="logo">Aarvi <span>Mehandi</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">Artist</a></li>
+    <li><a href="#gallery">Portfolio</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#pricing">Packages</a></li>
+  </ul>
+  <div class="nav-ph">📞 +91 70000 00000</div>
+  <button class="burger" id="bur"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="mn" id="mn">
+  <button class="mx" id="mx">✕</button>
+  <a href="#" onclick="cM()">Home</a>
+  <a href="#about" onclick="cM()">Artist</a>
+  <a href="#gallery" onclick="cM()">Portfolio</a>
+  <a href="#pricing" onclick="cM()">Packages</a>
+  <a href="#booking" onclick="cM()">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hleft">
+    <div class="htag">✦ Bhopal's #1 Bridal Mehendi Artist</div>
+    <h1>Reveal Your<br/>Inner <em>Bride!</em></h1>
+    <p class="hsub">Aarvi Mehandi Arts brings you the finest bridal henna in Bhopal — fully custom Indian designs, at-home service, and artistry passed down through generations.</p>
+    <div class="btns">
+      <a href="#booking" class="btn">Schedule Appointment</a>
+      <a href="#gallery" class="btn2">View Portfolio</a>
+    </div>
+  </div>
+
+  <div class="dc d1"><svg width="110" height="36" viewBox="0 0 110 36"><ellipse cx="55" cy="18" rx="54" ry="17" fill="#8B3A52" opacity=".78"/><ellipse cx="55" cy="18" rx="38" ry="11" fill="#B05070" opacity=".55"/><path d="M98 10Q110 18 98 26" stroke="#D4820A" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="dc d2"><svg width="85" height="28" viewBox="0 0 85 28"><ellipse cx="42" cy="14" rx="41" ry="13" fill="#C95642" opacity=".65"/><ellipse cx="42" cy="14" rx="26" ry="8" fill="#E88070" opacity=".5"/><path d="M75 8Q85 14 75 20" stroke="#F5C842" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="dc d3"><svg width="65" height="22" viewBox="0 0 65 22"><ellipse cx="32" cy="11" rx="31" ry="10" fill="#D4820A" opacity=".6"/></svg></div>
+
+  <div class="hright">
+    <div class="himg-wrap">
+      <div class="hportrait">
+        <!-- Real Indian bridal mehndi photo — Pexels free license, Sabir Khan Shourov -->
+        <div class="slot">
+          <img src="https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=700&h=875&fit=crop"
+            alt="Indian bridal mehndi on hands"
+            loading="eager"
+            onload="this.classList.add('on')"
+            onerror="fb(this,'h0')"/>
+        </div>
+      </div>
+      <div class="hbf hbf1">
+        <div style="font-size:1.5rem">🌸</div>
+        <div class="bi">
+          <div class="stars"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+          <strong>4.9 Rating</strong><span>500+ Brides</span>
+        </div>
+      </div>
+      <div class="hbf hbf2">
+        <div style="font-size:1.5rem">🏠</div>
+        <div class="bi"><strong>Home Service</strong><span>All Bhopal Areas</span></div>
+      </div>
+      <div class="hbf hbf3">
+        <div style="font-size:1.5rem">🎨</div>
+        <div class="bi"><strong>Custom Designs</strong><span>Every bride unique</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats rv">
+  <div><div class="sn"><span data-n="500">0</span><sup>+</sup></div><div class="sl">Happy Brides</div></div>
+  <div class="sdiv"></div>
+  <div><div class="sn"><span data-n="8">0</span><sup>+</sup></div><div class="sl">Years Experience</div></div>
+  <div class="sdiv"></div>
+  <div><div class="sn"><span data-n="1200">0</span><sup>+</sup></div><div class="sl">Designs Created</div></div>
+  <div class="sdiv"></div>
+  <div><div class="sn">4.9<sup>★</sup></div><div class="sl">Customer Rating</div></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="svc-top">
+    <div><div class="eye">Our Services</div><h2 class="stitle rv">Our Clients Get All Kinds<br/>of <em>Mehendi Art</em></h2></div>
+    <a href="#booking" class="btn rv">Book Appointment</a>
+  </div>
+  <div class="svc-grid">
+    <div class="sc c-m rv"><div class="scn"></div><div class="si">🎊</div><h3>Festival Mehendi</h3><p>Karva Chauth, Teej, Diwali & puja — seasonal Indian designs that celebrate every festivity beautifully.</p><a href="#booking" class="slink">Book Now →</a></div>
+    <div class="sc c-l rv" style="transition-delay:.1s"><div class="scn"></div><div class="si">🌙</div><h3>Arabic Artistry</h3><p>Bold flowing Arabic florals with generous negative space — perfect for the modern Indian bride and sangeet.</p><a href="#booking" class="slink">Book Now →</a></div>
+    <div class="sc c-p rv" style="transition-delay:.2s"><div class="scn"></div><div class="si">💍</div><h3>Engagement Mehendi</h3><p>Elegant medium-coverage designs tailored to complement your ring and trousseau on your big day.</p><a href="#booking" class="slink">Book Now →</a></div>
+    <div class="sc c-li rv" style="transition-delay:.3s"><div class="scn"></div><div class="si">👰</div><h3>Bridal Mehendi</h3><p>Full hands, feet, dulhe ka naam — our signature Indian bridal experience with deeply customized patterns.</p><a href="#booking" class="slink">Book Now →</a></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="ab-imgs rvl">
+    <div class="ab-main">
+      <!-- Real Indian bridal mehndi hands — Pexels #6936345 by Maksim Goncharenok -->
+      <div class="slot">
+        <img src="https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop"
+          alt="Indian bridal mehndi hands full"
+          loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'a0')"/>
+      </div>
+    </div>
+    <div class="ab-sub">
+      <!-- Mehndi application closeup — Pexels #5947541 -->
+      <div class="slot">
+        <img src="https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop"
+          alt="Mehndi artist applying henna"
+          loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'a1')"/>
+      </div>
+    </div>
+    <div class="ab-badge"><strong>8+</strong><small>Years of<br/>Artistry</small></div>
+  </div>
+  <div class="rvr">
+    <div class="eye">About The Artist</div>
+    <h2 class="stitle">Creating <em>Beautiful</em><br/>Mehendi Memories</h2>
+    <p style="font-size:.88rem;color:var(--muted);line-height:1.9;font-weight:300;margin-top:.8rem">Aarvi Mehandi Arts was born from a deep love for the ancient Indian art of henna. Based in Awadhpuri, Bhopal, we have spent over 8 years transforming brides' hands into personalized canvases of beauty and tradition.</p>
+    <p style="font-size:.88rem;color:var(--muted);line-height:1.9;font-weight:300;margin-top:.8rem">Every design begins with a conversation — about your wedding theme, your outfit colours, your favourite Indian motifs. No two brides ever receive the same pattern.</p>
+    <div class="why">
+      <div class="wi rv" style="transition-delay:.1s"><div class="wi-ic">🎨</div><div><h4>Custom Designs</h4><p>Tailored to your Indian bridal theme</p></div></div>
+      <div class="wi rv" style="transition-delay:.2s"><div class="wi-ic">🏠</div><div><h4>Home Service</h4><p>We come to you, anywhere in Bhopal</p></div></div>
+      <div class="wi rv" style="transition-delay:.3s"><div class="wi-ic">🌿</div><div><h4>Natural Henna</h4><p>100% skin-safe, chemical-free paste</p></div></div>
+      <div class="wi rv" style="transition-delay:.4s"><div class="wi-ic">⏰</div><div><h4>Always On Time</h4><p>Punctual, professional, stress-free</p></div></div>
+    </div>
+    <div style="margin-top:1.8rem"><a href="#booking" class="btn">Book Your Session</a></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gal-top">
+    <div><div class="eye">Portfolio</div><h2 class="stitle rv">View Our <em>Recent Gallery</em></h2></div>
+    <div class="gtabs rv">
+      <button class="gtab on">All</button>
+      <button class="gtab">Bridal</button>
+      <button class="gtab">Arabic</button>
+      <button class="gtab">Traditional</button>
+      <button class="gtab">Feet</button>
+    </div>
+  </div>
+  <div class="gg rv">
+
+    <!-- All photos: real Indian mehndi / bridal Pexels images — free license -->
+
+    <div class="gci gc1" data-lb="Bridal Full Hand" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #6936345 — Indian bridal mehndi full hands -->
+        <img src="https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Bridal full hand mehndi" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g0')"/>
+      </div>
+    </div>
+
+    <div class="gci gc2" data-lb="Intricate Bridal" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #28496968 — intricate bridal mehndi hands by Sabir Khan Shourov -->
+        <img src="https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&fit=crop" alt="Intricate bridal mehndi" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g1')"/>
+      </div>
+    </div>
+
+    <div class="gci gc3" data-lb="Indian Wedding" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #5947541 — mehndi application India -->
+        <img src="https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Mehndi application India" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g2')"/>
+      </div>
+    </div>
+
+    <div class="gci gc4" data-lb="Bridal Ceremony" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #3171837 — Indian wedding ceremony -->
+        <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Indian wedding ceremony" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g3')"/>
+      </div>
+    </div>
+
+    <div class="gci gc5" data-lb="Mehndi Design" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #4116710 — henna design close up -->
+        <img src="https://images.pexels.com/photos/4116710/pexels-photo-4116710.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Mehndi design closeup" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g4')"/>
+      </div>
+    </div>
+
+    <div class="gci gc6" data-lb="Arabic Design" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #3014856 — henna on hands -->
+        <img src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Arabic henna design" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g5')"/>
+      </div>
+    </div>
+
+    <div class="gci gc7" data-lb="Feet Mehendi" onclick="openLb(this)">
+      <div class="slot">
+        <!-- Pexels #6936345 cropped to feet -->
+        <img src="https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop&focalpoint=bottom" alt="Feet mehndi" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'g6')"/>
+      </div>
+    </div>
+
+  </div>
+  <div class="gal-cta rv"><a href="https://www.instagram.com" class="btn3">Explore All Designs →</a></div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pt rv">
+    <div class="eye" style="justify-content:center">Packages</div>
+    <h2 class="stitle" style="text-align:center">Choose Your <em>Mehendi Plan</em></h2>
+    <p style="font-size:.85rem;color:var(--lt);margin-top:.5rem;font-weight:300">Transparent pricing. No hidden charges. Custom quotes for group bookings.</p>
+  </div>
+  <div class="pcards">
+    <div class="pc rv">
+      <div class="ptier">Starter</div><div class="pname">Essential</div>
+      <div class="pprice"><sub>₹</sub>2,500<sup>+</sup></div>
+      <div class="pdesc">Perfect for intimate ceremonies & simple bridal looks.</div>
+      <ul class="plist"><li class="pli">Both hands full coverage</li><li class="pli">Traditional single style</li><li class="pli">Natural henna paste</li><li class="pli">Home visit available</li></ul>
+      <a href="#booking" class="pb">Grab This</a>
+    </div>
+    <div class="pc feat rv" style="transition-delay:.15s">
+      <div class="pbadge">Popular</div>
+      <div class="ptier">Best Value</div><div class="pname">Premium Bridal</div>
+      <div class="pprice"><sub>₹</sub>5,500<sup>+</sup></div>
+      <div class="pdesc">Our most chosen package for Indian weddings.</div>
+      <ul class="plist"><li class="pli">Full hands + both feet</li><li class="pli">Bridal motifs + dulhe ka naam</li><li class="pli">Choice of Indian style</li><li class="pli">Premium dark henna</li><li class="pli">Home visit included</li></ul>
+      <a href="#booking" class="pb">Grab This</a>
+    </div>
+    <div class="pc rv" style="transition-delay:.3s">
+      <div class="ptier">Luxury</div><div class="pname">Royal Bridal</div>
+      <div class="pprice"><sub>₹</sub>9,000<sup>+</sup></div>
+      <div class="pdesc">A lavish experience for the royal Indian bride.</div>
+      <ul class="plist"><li class="pli">Hands, feet & arms</li><li class="pli">Fully custom design</li><li class="pli">Multi-style fusion</li><li class="pli">Dedicated senior artist</li><li class="pli">Priority booking slot</li></ul>
+      <a href="#booking" class="pb">Grab This</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="ig">
+  <div class="ig-top">
+    <div><div class="eye">Instagram</div><h2 class="stitle rv">Follow Us On <em>Instagram</em></h2></div>
+    <a href="https://instagram.com" class="ig-btn rv">📸 See All Posts</a>
+  </div>
+  <div class="ig-grid rv">
+    <div class="ig-item" onclick="openLb(this)">
+      <div class="slot"><img src="https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="IG1" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'i0')"/></div>
+    </div>
+    <div class="ig-item" onclick="openLb(this)">
+      <div class="slot"><img src="https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="IG2" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'i1')"/></div>
+    </div>
+    <div class="ig-item" onclick="openLb(this)">
+      <div class="slot"><img src="https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="IG3" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'i2')"/></div>
+    </div>
+    <div class="ig-item" onclick="openLb(this)">
+      <div class="slot"><img src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop" alt="IG4" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'i3')"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="tw">
+    <div class="tp rvl">
+      <div class="tpb">
+        <!-- Indian bride portrait — Pexels #3171837 -->
+        <div class="slot">
+          <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=500&h=667&fit=crop" alt="Indian bride" loading="lazy" onload="this.classList.add('on')" onerror="fb(this,'t0')"/>
+        </div>
+      </div>
+      <div class="tqb">❝</div>
+    </div>
+    <div class="rvr">
+      <div class="eye">What Brides Say</div>
+      <h2 class="stitle">Our Clients <em>Love Us</em></h2>
+      <div class="tsl">
+        <div class="tc on">
+          <div class="tst"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+          <p class="tq">"Absolutely stunning bridal mehendi! The Indian bridal motifs were so intricate — every guest was asking who did my mehendi. I couldn't stop staring at my own hands all night!"</p>
+          <div class="ta">Priya Sharma</div><div class="tl">Bridal Client · Bhopal, 2024</div>
+        </div>
+        <div class="tc">
+          <div class="tst"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+          <p class="tq">"She made the dulhe ka naam so beautifully hidden in my design. I showed her one reference and she made it ten times more beautiful. My family still talks about my mehendi!"</p>
+          <div class="ta">Anjali Verma</div><div class="tl">Engagement Client · Awadhpuri, 2024</div>
+        </div>
+        <div class="tc">
+          <div class="tst"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div>
+          <p class="tq">"She did 6 bridesmaids at our sangeet — every design unique, stain so dark. Hands down the best mehendi artist in Bhopal. Worth every rupee and we've already rebooked!"</p>
+          <div class="ta">Kavya Mishra</div><div class="tl">Sangeet Event · Bhopal, 2023</div>
+        </div>
+      </div>
+      <div class="tdots">
+        <button class="tdot on" data-i="0"></button>
+        <button class="tdot" data-i="1"></button>
+        <button class="tdot" data-i="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="bw">
+    <div class="rvl">
+      <div class="eye">Book Now</div>
+      <h2 class="stitle">Schedule Your<br/><em>Mehendi Date</em></h2>
+      <p class="bsub">Limited bridal slots available each month. Reach out early — we'll personalise everything from Indian bridal design to delivery for your perfect day.</p>
+      <div class="chips">
+        <a href="tel:+917000000000" class="chip"><div class="cico ci-r">📞</div><div><div class="clbl">Call Directly</div><div class="cval">+91 70000 00000</div></div></a>
+        <a href="https://wa.me/917000000000" class="chip"><div class="cico ci-g">💬</div><div><div class="clbl">WhatsApp Booking</div><div class="cval">Quick response within hours</div></div></a>
+        <div class="chip"><div class="cico ci-b">📍</div><div><div class="clbl">Studio Location</div><div class="cval">Awadhpuri, Bhopal MP 462022</div></div></div>
+      </div>
+    </div>
+    <div class="rvr">
+      <div class="bfc">
+        <div id="bf">
+          <h3>Send an Enquiry ✦</h3>
+          <div class="fr">
+            <div class="fg"><label>Your Name</label><input type="text" placeholder="Bride / Client Name"/></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"/></div>
+          </div>
+          <div class="fr">
+            <div class="fg"><label>Event Type</label><select><option>Bridal Mehendi</option><option>Engagement</option><option>Festival / Puja</option><option>Sangeet / Party</option><option>Other</option></select></div>
+            <div class="fg"><label>Event Date</label><input type="date"/></div>
+          </div>
+          <div class="fg"><label>Your Area in Bhopal</label><input type="text" placeholder="Colony / Locality"/></div>
+          <div class="fg"><label>Design Preferences</label><textarea placeholder="Indian bridal style, outfit colour, number of people…"></textarea></div>
+          <button class="fsub" onclick="submitF()">Submit Enquiry →</button>
+        </div>
+        <div class="fok" id="fok">
+          <div class="fic">🪷</div>
+          <h4>Enquiry Received!</h4>
+          <p>We'll reach out within a few hours to confirm your booking and discuss your perfect Indian bridal design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<div class="sub">
+  <div class="rv"><h2>Subscribe For New<br/>Offers & Notifications</h2><p>Be first to know about wedding season discounts & new design launches.</p></div>
+  <div class="subf rv" style="transition-delay:.2s"><input class="subin" type="email" placeholder="Enter your email…"/><button class="subbtn">Subscribe Now</button></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg2">
+    <div class="fab rv">
+      <div class="flogo">Aarvi <span>Mehandi</span></div>
+      <p>Bhopal's most trusted bridal mehendi studio — delivering beautiful, personalized Indian henna art to brides and families across Madhya Pradesh since 2016.</p>
+      <div class="fsocs">
+        <a class="fsoc" href="#">📸</a>
+        <a class="fsoc" href="#">f</a>
+        <a class="fsoc" href="https://wa.me/917000000000">💬</a>
+      </div>
+    </div>
+    <div class="fcol rv" style="transition-delay:.1s">
+      <h4>Service</h4>
+      <ul><li><a href="#services">Bridal Mehendi</a></li><li><a href="#services">Engagement Henna</a></li><li><a href="#services">Arabic Designs</a></li><li><a href="#services">Festival Mehendi</a></li><li><a href="#services">Group Bookings</a></li></ul>
+    </div>
+    <div class="fcol rv" style="transition-delay:.2s">
+      <h4>Company</h4>
+      <ul><li><a href="#about">About Us</a></li><li><a href="#gallery">Portfolio</a></li><li><a href="#pricing">Packages</a></li><li><a href="#testimonials">Reviews</a></li></ul>
+    </div>
+    <div class="fcol rv" style="transition-delay:.3s">
+      <h4>Help</h4>
+      <ul><li><a href="#booking">Book Now</a></li><li><a href="tel:+917000000000">Contact</a></li><li><a href="#">FAQ</a></li><li><a href="#">Back to Top ↑</a></li></ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 Aarvi Mehandi Arts · Awadhpuri, Bhopal MP 462022 · All rights reserved</p>
+    <p>Photos: Pexels (free license)</p>
+  </div>
+</footer>
+
+<!-- DESIGNER CREDIT BAR -->
+<div style="
+  background:#0E1220;
+  padding:.85rem 3rem;
+  text-align:center;
+  letter-spacing:.18em;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.68rem;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  flex-wrap:wrap;
+">
+  WEBSITE DESIGNED BY
+  <a href="#" style="
+    color:#C9A84C;
+    text-decoration:none;
+    font-weight:700;
+    letter-spacing:.22em;
+    transition:color .3s;
+  "
+  onmouseover="this.style.color='#E8C97A'"
+  onmouseout="this.style.color='#C9A84C'"
+  >SAVERAGRAPHICS</a>
+  <span style="color:rgba(255,255,255,.2)">·</span>
+  <span>A</span>
+  <span style="
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:.75rem;
+    color:rgba(255,255,255,.5);
+    letter-spacing:.08em;
+    font-weight:400;
+    text-transform:none;
+  ">sindhuragroup</span>
+  <span>COMPANY</span>
+</div>
+
+<a href="https://wa.me/917000000000" class="wa">💬</a>
+
+<div class="lb" id="lb">
+  <button class="lbx" onclick="cLb()">✕</button>
+  <img id="lbi" src="" alt=""/>
+</div>
+
+<script>
+/* FALLBACK CHAINS — all real Indian mehndi/bridal Pexels IDs */
+var FB2={
+  h0:['https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=700&h=875&fit=crop',
+      'https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=700&h=875&fit=crop',
+      'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=700&h=875&fit=crop'],
+  a0:['https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop',
+      'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=700&h=900&fit=crop'],
+  a1:['https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop',
+      'https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop'],
+  g0:['https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'],
+  g1:['https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&fit=crop'],
+  g2:['https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'],
+  g3:['https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop'],
+  g4:['https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'],
+  g5:['https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'],
+  g6:['https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop'],
+  i0:['https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop'],
+  i1:['https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop'],
+  i2:['https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop'],
+  i3:['https://images.pexels.com/photos/5947541/pexels-photo-5947541.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop'],
+  t0:['https://images.pexels.com/photos/6936345/pexels-photo-6936345.jpeg?auto=compress&cs=tinysrgb&w=500&h=667&fit=crop',
+      'https://images.pexels.com/photos/28496968/pexels-photo-28496968.jpeg?auto=compress&cs=tinysrgb&w=500&h=667&fit=crop']
+};
+var TR2={};
+function fb(el,k){
+  TR2[k]=(TR2[k]||0);
+  var fl=FB2[k]||[];
+  if(TR2[k]<fl.length){
+    el.src=fl[TR2[k]++];
+    el.onload=function(){this.classList.add('on')};
+  }
+  // All failed → warm peach gradient from .slot background shows — never broken
+}
+
+/* NAV */
+document.getElementById('bur').onclick=function(){document.getElementById('mn').classList.add('open')};
+document.getElementById('mx').onclick=function(){document.getElementById('mn').classList.remove('open')};
+function cM(){document.getElementById('mn').classList.remove('open')}
+
+/* SCROLL REVEAL */
+var rvAll=document.querySelectorAll('.rv,.rvl,.rvr');
+var rvO=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rvO.unobserve(e.target)}});
+},{threshold:.1});
+rvAll.forEach(function(el){rvO.observe(el)});
+
+/* COUNTERS */
+var ns=document.querySelectorAll('[data-n]');
+var nO=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(!e.isIntersecting)return;
+    var el=e.target,t=+el.dataset.n,c=0,s=t/80;
+    var x=setInterval(function(){c=Math.min(c+s,t);el.textContent=Math.floor(c);if(c>=t)clearInterval(x)},20);
+    nO.unobserve(el);
+  });
+},{threshold:.5});
+ns.forEach(function(el){nO.observe(el)});
+
+/* GALLERY TABS */
+document.querySelectorAll('.gtab').forEach(function(b){
+  b.onclick=function(){document.querySelectorAll('.gtab').forEach(function(x){x.classList.remove('on')});b.classList.add('on')};
+});
+
+/* TESTIMONIALS */
+var ti=0,tc=document.querySelectorAll('.tc'),td=document.querySelectorAll('.tdot');
+function goT(i){tc[ti].classList.remove('on');td[ti].classList.remove('on');ti=i;tc[ti].classList.add('on');td[ti].classList.add('on')}
+td.forEach(function(d){d.onclick=function(){goT(+d.dataset.i)}});
+setInterval(function(){goT((ti+1)%tc.length)},4500);
+
+/* LIGHTBOX */
+function openLb(el){
+  var img=el.querySelector('.slot img');
+  if(!img||!img.src)return;
+  document.getElementById('lbi').src=img.src;
+  document.getElementById('lb').classList.add('open');
+}
+function cLb(){document.getElementById('lb').classList.remove('open')}
+document.getElementById('lb').onclick=function(e){if(e.target===this)cLb()};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')cLb()});
+
+/* FORM */
+function submitF(){document.getElementById('bf').style.display='none';document.getElementById('fok').style.display='block'}
+</script>
+</body>
+</html>
